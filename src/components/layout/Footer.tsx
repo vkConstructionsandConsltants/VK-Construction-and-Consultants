@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,25 +10,26 @@ export default function Footer() {
         <div className="space-y-6">
           <Link href="/" className="flex flex-col items-start group">
             <span className="text-2xl font-bold tracking-tighter font-headline text-white group-hover:text-primary transition-colors">
-              GOLDENBUILD
+              V K CONSTRUCTION
             </span>
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-primary ml-1">
-              India
+              & CONSULTANTS
             </span>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Excellence in construction and architectural innovation. We build the future of India with integrity, precision, and luxury.
+            Turnkey Construction Experts – Build smart, build strong. Delivering high-quality residential and commercial projects across Karnataka since 2021.
           </p>
           <div className="flex space-x-4">
-            {[Linkedin, Instagram, Facebook, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
-                <Icon size={18} className="text-gray-400 group-hover:text-white" />
-              </a>
-            ))}
+            <a href="https://www.instagram.com/vk.construction_consultants?igsh=Z2VkbjZzcXN4NHM=" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+              <Instagram size={18} className="text-gray-400 group-hover:text-white" />
+            </a>
+            <a href="#" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+              <Linkedin size={18} className="text-gray-400 group-hover:text-white" />
+            </a>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Navigation */}
         <div>
           <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Navigation</h4>
           <ul className="space-y-4 text-sm font-medium">
@@ -46,7 +47,13 @@ export default function Footer() {
         <div>
           <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Services</h4>
           <ul className="space-y-4 text-sm font-medium">
-            {['Commercial Projects', 'Residential Suites', 'Infrastructure', 'Interior Design'].map((item) => (
+            {[
+              'Turnkey Construction',
+              'Residential Projects',
+              'Interior Work',
+              'Structural Consultancy',
+              '2D & 3D Planning'
+            ].map((item) => (
               <li key={item}>
                 <Link href="/services" className="text-gray-400 hover:text-white hover:pl-2 transition-all">
                   {item}
@@ -58,28 +65,32 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Contact Us</h4>
+          <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Get In Touch</h4>
           <ul className="space-y-6 text-sm">
             <li className="flex items-start space-x-4">
               <MapPin size={20} className="text-primary shrink-0 mt-1" />
               <span className="text-gray-400 leading-relaxed">
-                45 Golden Avenue, Business District, <br />Mumbai, Maharashtra 400001
+                High Tension Double Road, Near Dhanush Corner, <br />Vijayanagar 4th Stage, Mysore – 570017
               </span>
             </li>
             <li className="flex items-center space-x-4">
               <Phone size={20} className="text-primary shrink-0" />
-              <span className="text-gray-400">+91 (22) 5550-0198</span>
+              <span className="text-gray-400">+91 99016 20876</span>
             </li>
             <li className="flex items-center space-x-4">
               <Mail size={20} className="text-primary shrink-0" />
-              <span className="text-gray-400">contact@goldenbuild.in</span>
+              <span className="text-gray-400 break-all">vkconstructionandconsultants@gmail.com</span>
+            </li>
+            <li className="flex items-center space-x-4">
+              <Clock size={20} className="text-primary shrink-0" />
+              <span className="text-gray-400">Mon–Sat, 9 AM – 8 PM</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
-        <p>© 2024 GoldenBuild India. All Rights Reserved.</p>
+        <p>© 2024 V K Construction & Consultants. UDYAM Registered.</p>
         <div className="flex space-x-8">
           <Link href="#" className="hover:text-primary">Privacy Policy</Link>
           <Link href="#" className="hover:text-primary">Terms of Service</Link>

@@ -5,8 +5,8 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'GoldenBuild India | Premium Construction & Engineering',
-  description: 'Leading premium construction company in India specializing in luxury residential, commercial, and infrastructure projects.',
+  title: 'V K Construction & Consultants | Turnkey Construction Experts',
+  description: 'Trusted construction firm in Mysore and across Karnataka. Specializing in high-quality residential and commercial turnkey projects since 2021.',
 };
 
 export default function RootLayout({

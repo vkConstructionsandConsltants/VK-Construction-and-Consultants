@@ -38,10 +38,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex flex-col items-start group">
           <span className="text-2xl font-bold tracking-tighter font-headline text-foreground group-hover:text-primary transition-colors">
-            GOLDENBUILD
+            V K CONSTRUCTION
           </span>
           <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-primary ml-1">
-            India
+            & CONSULTANTS
           </span>
         </Link>
 

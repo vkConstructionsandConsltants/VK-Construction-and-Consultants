@@ -3,51 +3,51 @@
   "placeholderImages": [
     {
       "id": "hero-main",
-      "description": "Luxury modern skyscraper under construction",
-      "imageUrl": "https://picsum.photos/seed/construction1/1920/1080",
-      "imageHint": "luxury construction"
+      "description": "V K Construction - Main Project Site",
+      "imageUrl": "https://picsum.photos/seed/vkconst1/1920/1080",
+      "imageHint": "modern construction"
     },
     {
       "id": "service-residential",
-      "description": "High-end residential villa",
-      "imageUrl": "https://picsum.photos/seed/villa/800/600",
-      "imageHint": "modern villa"
+      "description": "High-end residential villa in Mysore",
+      "imageUrl": "https://picsum.photos/seed/vkvilla/800/600",
+      "imageHint": "luxury home"
     },
     {
       "id": "service-commercial",
-      "description": "Corporate office building glass facade",
-      "imageUrl": "https://picsum.photos/seed/office/800/600",
-      "imageHint": "office building"
+      "description": "Commercial building project",
+      "imageUrl": "https://picsum.photos/seed/vkoffice/800/600",
+      "imageHint": "commercial building"
     },
     {
       "id": "service-industrial",
-      "description": "Large scale industrial warehouse",
-      "imageUrl": "https://picsum.photos/seed/industrial/800/600",
-      "imageHint": "industrial warehouse"
+      "description": "Project Management Site",
+      "imageUrl": "https://picsum.photos/seed/vkpmc/800/600",
+      "imageHint": "construction site"
     },
     {
       "id": "project-1",
-      "description": "The Golden Plaza - Commercial Hub",
-      "imageUrl": "https://picsum.photos/seed/project1/800/600",
-      "imageHint": "commercial plaza"
+      "description": "Om Shanti Bhavana - Residential Project",
+      "imageUrl": "https://picsum.photos/seed/omshanti/800/600",
+      "imageHint": "modern villa"
     },
     {
       "id": "project-2",
-      "description": "Ivory Heights - Residential Towers",
-      "imageUrl": "https://picsum.photos/seed/project2/800/600",
-      "imageHint": "residential tower"
+      "description": "Modern Turnkey Villa Mysore",
+      "imageUrl": "https://picsum.photos/seed/vkproject2/800/600",
+      "imageHint": "luxury residential"
     },
     {
       "id": "project-3",
-      "description": "Aura Corporate Center",
-      "imageUrl": "https://picsum.photos/seed/project3/800/600",
-      "imageHint": "corporate center"
+      "description": "Interior Work Showroom",
+      "imageUrl": "https://picsum.photos/seed/vkinterior/800/600",
+      "imageHint": "modern interior"
     },
     {
       "id": "about-team",
-      "description": "Professional construction management team",
-      "imageUrl": "https://picsum.photos/seed/team/1200/800",
-      "imageHint": "construction team"
+      "description": "V K Construction Technical Team",
+      "imageUrl": "https://picsum.photos/seed/vkteam/1200/800",
+      "imageHint": "civil engineer"
     }
   ]
 }
