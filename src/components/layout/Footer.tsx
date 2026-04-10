@@ -1,6 +1,8 @@
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Linkedin, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import logo from '@/assets/VK Logo.jpeg';
 
 export default function Footer() {
   return (
@@ -9,6 +11,13 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-6">
           <Link href="/" className="flex flex-col items-start group">
+            <Image 
+              src={logo} 
+              alt="V K Construction Logo" 
+              width={80} 
+              height={80} 
+              className="mb-4 transition-all duration-500"
+            />
             <span className="text-2xl font-bold tracking-tighter font-headline text-white group-hover:text-primary transition-colors">
               V K CONSTRUCTION
             </span>
@@ -49,10 +58,14 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-medium">
             {[
               'Turnkey Construction',
-              'Residential Projects',
+              'Residential Construction',
+              'Commercial Construction',
               'Interior Work',
+              'Renovation',
               'Structural Consultancy',
-              '2D & 3D Planning'
+              '2D Plan Design',
+              '3D Elevation Design',
+              'Project Management'
             ].map((item) => (
               <li key={item}>
                 <Link href="/services" className="text-gray-400 hover:text-white hover:pl-2 transition-all">

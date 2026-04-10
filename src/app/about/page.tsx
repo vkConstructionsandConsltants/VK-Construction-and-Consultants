@@ -44,14 +44,14 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-square order-1 lg:order-2">
-              <Image 
-                src={teamImg?.imageUrl || ''} 
-                alt="Pradeep Kumar K C - Founder" 
-                fill 
-                className="object-cover"
-              />
-              <div className="absolute top-0 right-0 w-full h-full border-t-[20px] border-r-[20px] border-primary/20 pointer-events-none" />
+            <div className="order-1 lg:order-2 flex justify-center items-center">
+              <div className="relative w-full max-w-lg aspect-[1.75/1] shadow-2xl overflow-hidden border border-muted/20 bg-black">
+                <img 
+                  src={teamImg?.imageUrl || ''} 
+                  alt="V K Construction Visiting Card" 
+                  className="w-full h-full object-cover scale-[1.23] origin-center"
+                />
+              </div>
             </div>
           </div>
         </div>

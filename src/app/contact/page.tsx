@@ -35,11 +35,14 @@ export default function Contact() {
                   <label className="text-[10px] uppercase tracking-widest font-black">Interested Service</label>
                   <select className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm appearance-none">
                     <option>Turnkey Construction</option>
-                    <option>Residential Project</option>
+                    <option>Residential Construction</option>
                     <option>Commercial Construction</option>
-                    <option>2D Plan & 3D Elevation</option>
                     <option>Interior Work</option>
                     <option>Renovation</option>
+                    <option>Structural Consultancy</option>
+                    <option>2D Plan Design</option>
+                    <option>3D Elevation Design</option>
+                    <option>Project Management & Consultation (PMC)</option>
                   </select>
                 </div>
                 <div className="space-y-2">

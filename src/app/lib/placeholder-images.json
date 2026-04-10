@@ -1,53 +1,82 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-main",
       "description": "V K Construction - Main Project Site",
-      "imageUrl": "https://picsum.photos/seed/construction1/1920/1080",
+      "imageUrl": "/images/hero-main.png",
       "imageHint": "modern construction"
+    },
+    {
+      "id": "hero-villa",
+      "description": "V K Construction Official Hero - Project Showcase",
+      "imageUrl": "/images/hero-official.png",
+      "imageHint": "official business hero"
     },
     {
       "id": "service-residential",
       "description": "High-end residential villa in Mysore",
-      "imageUrl": "https://picsum.photos/seed/vkvilla/800/600",
+      "imageUrl": "/images/service-residential.png",
       "imageHint": "luxury home"
     },
     {
       "id": "service-commercial",
       "description": "Commercial building project",
-      "imageUrl": "https://picsum.photos/seed/vkoffice/800/600",
+      "imageUrl": "/images/service-commercial.png",
       "imageHint": "commercial building"
     },
     {
       "id": "service-industrial",
       "description": "Project Management Site",
-      "imageUrl": "https://picsum.photos/seed/vkpmc/800/600",
+      "imageUrl": "/images/service-industrial.png",
       "imageHint": "construction site"
+    },
+    {
+      "id": "service-structural",
+      "description": "Structural Consultancy & Safety",
+      "imageUrl": "/images/service-structural.png",
+      "imageHint": "civil engineering"
+    },
+    {
+      "id": "service-2d",
+      "description": "2D Architectural Plans",
+      "imageUrl": "/images/service-2d.png",
+      "imageHint": "architectural blueprint"
+    },
+    {
+      "id": "service-3d",
+      "description": "3D Elevation Renders",
+      "imageUrl": "/images/service-3d.png",
+      "imageHint": "3d building model"
+    },
+    {
+      "id": "service-pmc",
+      "description": "Project Management & Consultation",
+      "imageUrl": "/images/service-pmc.png",
+      "imageHint": "business consultation"
     },
     {
       "id": "project-1",
       "description": "Om Shanti Bhavana - Residential Project",
-      "imageUrl": "https://picsum.photos/seed/omshanti/800/600",
+      "imageUrl": "/images/project-1.png",
       "imageHint": "modern villa"
     },
     {
       "id": "project-2",
       "description": "Modern Turnkey Villa Mysore",
-      "imageUrl": "https://picsum.photos/seed/vkproject2/800/600",
+      "imageUrl": "/images/project-2.png",
       "imageHint": "luxury residential"
     },
     {
       "id": "project-3",
       "description": "Interior Work Showroom",
-      "imageUrl": "https://picsum.photos/seed/vkinterior/800/600",
+      "imageUrl": "/images/project-3.png",
       "imageHint": "modern interior"
     },
     {
       "id": "about-team",
-      "description": "V K Construction Technical Team",
-      "imageUrl": "https://picsum.photos/seed/vkteam/1200/800",
-      "imageHint": "civil engineer"
+      "description": "V K Construction Official Visiting Card",
+      "imageUrl": "/images/visiting-card.jpeg",
+      "imageHint": "visiting card"
     }
   ]
 }

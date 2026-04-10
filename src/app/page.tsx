@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight, Award, Shield, Timer, HardHat, CheckCircle2 }
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-main');
+  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-villa');
   const featuredProjects = [
     { id: 'p1', title: 'Om Shanti Bhavana', type: 'Residential', location: 'Channarayapatna', area: '5000 sq ft' },
     { id: 'p2', title: 'Modern Turnkey Villa', type: 'Turnkey', location: 'Mysore', area: '2400 sq ft' },

@@ -7,42 +7,74 @@ const services = [
   {
     id: 'turnkey',
     title: 'Turnkey Construction',
-    desc: 'End-to-end solutions from planning to handover. We handle everything, so you can build with peace of mind.',
+    desc: 'Complete end-to-end construction service — from design, planning, approvals, materials, labour, execution to final handover.',
     image: 'hero-main',
     icon: Construction,
-    features: ['Transparent Budgeting', 'Material Procurement', 'On-time Delivery']
+    features: ['Approvals & Planning', 'Material Procurement', 'Final Handover']
   },
   {
-    id: 'planning',
-    title: '2D Plan & 3D Elevation',
-    desc: 'Professional architectural design and 3D visualizations to help you see your dream home before we start building.',
+    id: 'residential',
+    title: 'Residential Construction',
+    desc: 'Construction of individual houses, villas, duplex homes with quality materials and structural safety.',
     image: 'service-residential',
-    icon: PencilRuler,
-    features: ['Vastu Compliant', 'Realistic Renders', 'Space Optimization']
+    icon: HomeIcon,
+    features: ['Villas & Duplex', 'Structural Safety', 'Quality Materials']
   },
   {
     id: 'commercial',
-    title: 'Commercial Projects',
-    desc: 'Functional and aesthetic commercial spaces designed for efficiency and modern business needs.',
+    title: 'Commercial Construction',
+    desc: 'Construction of offices, shops, commercial complexes and business buildings.',
     image: 'service-commercial',
     icon: Building2,
-    features: ['Sustainable Design', 'Modern Façades', 'Safety Compliant']
+    features: ['Office Spaces', 'Shops & Complexes', 'Modern Design']
   },
   {
     id: 'interiors',
     title: 'Interior Work',
-    desc: 'Exquisite interior transformations that blend functionality with high-end aesthetic appeal.',
+    desc: 'Interior design and execution including modular kitchen, wardrobes, false ceiling, lighting and finishes.',
     image: 'project-3',
     icon: Palette,
-    features: ['Custom Cabinetry', 'Lighting Design', 'Premium Finishes']
+    features: ['Modular Kitchen', 'False Ceiling', 'Premium Finishes']
+  },
+  {
+    id: 'renovation',
+    title: 'Renovation',
+    desc: 'Upgrading or modifying existing buildings including structural changes, redesign and improvements.',
+    image: 'service-industrial',
+    icon: Settings,
+    features: ['Structural Changes', 'Redesign', 'Building Improvement']
+  },
+  {
+    id: 'consultancy',
+    title: 'Structural Consultancy',
+    desc: 'Expert advice on structural safety, load calculations and construction feasibility.',
+    image: 'service-structural',
+    icon: CheckCircle,
+    features: ['Safety Analysis', 'Load Calculations', 'Feasibility Study']
+  },
+  {
+    id: '2d-plan',
+    title: '2D Plan Design',
+    desc: 'Detailed architectural floor plans showing layout, room sizes and spatial planning.',
+    image: 'service-2d',
+    icon: PencilRuler,
+    features: ['Floor Layout', 'Spatial Planning', 'Vastu Compliant']
+  },
+  {
+    id: '3d-elevation',
+    title: '3D Elevation Design',
+    desc: '3D visual representation of building exterior before construction begins.',
+    image: 'service-3d',
+    icon: Factory,
+    features: ['Visual Mockups', 'Exterior Design', 'Realistic Renders']
   },
   {
     id: 'pmc',
-    title: 'Project Management (PMC)',
-    desc: 'Expert consultation and management services to ensure your project stays on track and within budget.',
-    image: 'service-industrial',
+    title: 'Project Management & Consultation (PMC)',
+    desc: 'Professional guidance for planning, budgeting, monitoring and managing construction projects efficiently.',
+    image: 'service-pmc',
     icon: FileSpreadsheet,
-    features: ['Cost Management', 'Site Supervision', 'Quality Audits']
+    features: ['Budgeting', 'Project Monitoring', 'Efficient Management']
   }
 ];
 
