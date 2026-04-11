@@ -7,9 +7,30 @@ import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-villa');
   const featuredProjects = [
-    { id: 'p1', title: 'Om Shanti Bhavana', type: 'Residential', location: 'Channarayapatna', area: '5000 sq ft' },
-    { id: 'p2', title: 'Modern Turnkey Villa', type: 'Turnkey', location: 'Mysore', area: '2400 sq ft' },
-    { id: 'p3', title: 'Commercial Complex', type: 'Commercial', location: 'Mandya', area: '8000 sq ft' },
+    { 
+      id: 'project-1', 
+      title: 'Om Shanti Bhavana', 
+      type: 'Residential', 
+      location: 'Channarayapatna, Hassan', 
+      area: '5000 sq ft',
+      imageUrl: '/images/project-om-shanti.jpeg'
+    },
+    { 
+      id: 'project-2', 
+      title: 'Mr. Divakar Residence', 
+      type: 'Technical Support', 
+      location: 'K R Nagar', 
+      area: '2400 sq ft',
+      imageUrl: '/images/project-divakar.jpeg'
+    },
+    { 
+      id: 'project-3', 
+      title: 'Mr. Girish Residence', 
+      type: 'New Construction', 
+      location: 'K R Nagar', 
+      area: '3200 sq ft',
+      imageUrl: '/images/project-girish.jpeg'
+    },
   ];
 
   return (
@@ -105,17 +126,13 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-2xl">
+              <div className="aspect-square relative overflow-hidden shadow-2xl bg-black">
                 <Image 
-                  src={PlaceHolderImages.find(img => img.id === 'about-team')?.imageUrl || ''} 
-                  alt="Construction Site" 
+                  src={PlaceHolderImages.find(img => img.id === 'vk-full-official')?.imageUrl || ''} 
+                  alt="V K Construction Excellence" 
                   fill 
                   className="object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-10 -left-10 bg-primary p-12 text-white hidden md:block">
-                <span className="text-6xl font-black italic block mb-2">5+</span>
-                <span className="text-xs uppercase tracking-[0.2em] font-bold">Years of Technical <br />Expertise</span>
               </div>
             </div>
           </div>
@@ -126,9 +143,9 @@ export default function Home() {
       <section className="py-32 bg-black text-white px-6 lg:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
-            <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Sample Showcase</h4>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Om Shanti Bhavana</h2>
-            <p className="text-primary mt-2 font-bold tracking-widest">Channarayapatna | 5000 SQ FT</p>
+            <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Our Portfolio</h4>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Signature Projects</h2>
+            <p className="text-primary mt-2 font-bold tracking-widest">RESIDENTIAL | COMMERCIAL | TURNKEY</p>
           </div>
           <Link href="/gallery" className="text-xs uppercase tracking-[0.3em] font-bold text-white flex items-center hover:text-primary transition-colors">
             Explore All Projects <ChevronRight className="ml-2" />
@@ -139,10 +156,10 @@ export default function Home() {
           {featuredProjects.map((project, i) => (
             <div key={project.id} className="group relative overflow-hidden aspect-[3/4] border border-white/10">
               <Image 
-                src={PlaceHolderImages[i % PlaceHolderImages.length].imageUrl} 
+                src={project.imageUrl} 
                 alt={project.title} 
                 fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform">

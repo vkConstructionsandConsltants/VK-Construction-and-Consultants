@@ -56,27 +56,33 @@
     },
     {
       "id": "project-1",
-      "description": "Om Shanti Bhavana - Residential Project",
-      "imageUrl": "/images/project-1.png",
-      "imageHint": "modern villa"
+      "description": "Om Shanti Bhavana at Channarayapatna, Hassan",
+      "imageUrl": "/images/project-om-shanti.jpeg",
+      "imageHint": "residential project"
     },
     {
       "id": "project-2",
-      "description": "Modern Turnkey Villa Mysore",
-      "imageUrl": "/images/project-2.png",
-      "imageHint": "luxury residential"
+      "description": "Mr.Divakar residence at K R Nagar",
+      "imageUrl": "/images/project-divakar.jpeg",
+      "imageHint": "luxury residence"
     },
     {
       "id": "project-3",
-      "description": "Interior Work Showroom",
-      "imageUrl": "/images/project-3.png",
-      "imageHint": "modern interior"
+      "description": "Mr.Girish Residence at K R Nagar",
+      "imageUrl": "/images/project-girish.jpeg",
+      "imageHint": "modern home k r nagar"
     },
     {
       "id": "about-team",
       "description": "V K Construction Official Visiting Card",
       "imageUrl": "/images/visiting-card.jpeg",
       "imageHint": "visiting card"
+    },
+    {
+      "id": "vk-full-official",
+      "description": "V K Construction Excellence - Main Office/Project Photo",
+      "imageUrl": "/images/vk-full.jpeg",
+      "imageHint": "professional construction photo"
     }
   ]
 }
