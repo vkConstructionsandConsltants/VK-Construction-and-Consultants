@@ -3,6 +3,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import WhatsAppFloat from '@/components/common/WhatsAppFloat';
 
 export const metadata: Metadata = {
   title: 'V K Construction & Consultants | Turnkey Construction Experts',
@@ -27,6 +28,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

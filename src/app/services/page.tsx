@@ -8,7 +8,7 @@ const services = [
     id: 'turnkey',
     title: 'Turnkey Construction',
     desc: 'Complete end-to-end construction service — from design, planning, approvals, materials, labour, execution to final handover.',
-    image: 'hero-main',
+    image: 'service-turnkey',
     icon: Construction,
     features: ['Approvals & Planning', 'Material Procurement', 'Final Handover']
   },
@@ -32,7 +32,7 @@ const services = [
     id: 'interiors',
     title: 'Interior Work',
     desc: 'Interior design and execution including modular kitchen, wardrobes, false ceiling, lighting and finishes.',
-    image: 'project-3',
+    image: 'service-interiors',
     icon: Palette,
     features: ['Modular Kitchen', 'False Ceiling', 'Premium Finishes']
   },
@@ -40,7 +40,7 @@ const services = [
     id: 'renovation',
     title: 'Renovation',
     desc: 'Upgrading or modifying existing buildings including structural changes, redesign and improvements.',
-    image: 'service-industrial',
+    image: 'service-renovation',
     icon: Settings,
     features: ['Structural Changes', 'Redesign', 'Building Improvement']
   },
@@ -94,7 +94,7 @@ export default function Services() {
       <section className="px-6 lg:px-12 py-20 bg-white">
         <div className="max-w-7xl mx-auto space-y-32">
           {services.map((service, i) => (
-            <div key={service.id} className={`grid lg:grid-cols-2 gap-20 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+            <div key={service.id} id={service.id} className={`grid lg:grid-cols-2 gap-20 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={`${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-primary/10 flex items-center justify-center">

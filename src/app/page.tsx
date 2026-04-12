@@ -9,27 +9,27 @@ export default function Home() {
   const featuredProjects = [
     { 
       id: 'project-1', 
-      title: 'Om Shanti Bhavana', 
-      type: 'Residential', 
-      location: 'Channarayapatna, Hassan', 
-      area: '5000 sq ft',
-      imageUrl: '/images/project-om-shanti.jpeg'
+      title: 'Bar and Restaurant at KRN', 
+      type: 'Commercial', 
+      location: 'K R Nagar', 
+      area: '6000 sq ft',
+      imageUrl: '/images/projects/bar-restaurant-krn.jpeg'
     },
     { 
       id: 'project-2', 
-      title: 'Mr. Divakar Residence', 
-      type: 'Technical Support', 
+      title: 'Mr. Girish Residence', 
+      type: 'Residential', 
       location: 'K R Nagar', 
-      area: '2400 sq ft',
-      imageUrl: '/images/project-divakar.jpeg'
+      area: '3200 sq ft',
+      imageUrl: '/images/projects/girish-residence-krnagar.jpeg'
     },
     { 
       id: 'project-3', 
-      title: 'Mr. Girish Residence', 
-      type: 'New Construction', 
-      location: 'K R Nagar', 
-      area: '3200 sq ft',
-      imageUrl: '/images/project-girish.jpeg'
+      title: 'Mr. Vasanth Residence', 
+      type: '3D Elevation Design', 
+      location: 'Hunsur', 
+      area: '2400 sq ft',
+      imageUrl: '/images/projects/vasanth-residence-hunsur.jpeg'
     },
   ];
 

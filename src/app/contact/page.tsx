@@ -121,14 +121,29 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[500px] w-full bg-off-white relative overflow-hidden grayscale contrast-125 border-t border-muted">
-         <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-               <MapPin size={48} className="text-primary mx-auto mb-4" />
-               <p className="text-xs uppercase tracking-widest font-bold">Vijayanagar 4th Stage, Mysore</p>
-            </div>
-         </div>
+      {/* Map Section */}
+      <section className="h-[500px] w-full relative group">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15591.314227306236!2d76.5828453!3d12.32717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf71f9f2e3a151%3A0x7d0a6c6d09e7c5b!2sVijayanagar%204th%20Stage%2C%20Mysuru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1712912345678!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0, filter: 'grayscale(1) contrast(1.2) opacity(0.8)' }} 
+          allowFullScreen={true} 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100"
+        />
+        <div className="absolute top-8 left-8 z-10">
+          <a 
+            href="https://maps.google.com/maps?q=High%20Tension%20Double%20Road,%20Near%20Dhanush%20Corner,%20Vijayanagar%204th%20Stage,%20Mysore%20570017" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-black text-white px-8 py-4 text-[10px] uppercase font-bold tracking-widest flex items-center shadow-2xl hover:bg-primary transition-all"
+          >
+            <MapPin size={14} className="mr-3" />
+            Open In Google Maps
+          </a>
+        </div>
       </section>
     </div>
   );

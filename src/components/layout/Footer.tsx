@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Linkedin, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import logo from '@/assets/VK Logo.jpeg';
 
 export default function Footer() {
@@ -32,8 +32,18 @@ export default function Footer() {
             <a href="https://www.instagram.com/vk.construction_consultants?igsh=Z2VkbjZzcXN4NHM=" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
               <Instagram size={18} className="text-gray-400 group-hover:text-white" />
             </a>
-            <a href="#" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
-              <Linkedin size={18} className="text-gray-400 group-hover:text-white" />
+            <a href="https://wa.me/919901620876" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-[#25D366] hover:border-[#25D366] transition-all group">
+              <svg 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="w-[18px] h-[18px] text-gray-400 group-hover:text-white"
+              >
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -57,19 +67,19 @@ export default function Footer() {
           <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Services</h4>
           <ul className="space-y-4 text-sm font-medium">
             {[
-              'Turnkey Construction',
-              'Residential Construction',
-              'Commercial Construction',
-              'Interior Work',
-              'Renovation',
-              'Structural Consultancy',
-              '2D Plan Design',
-              '3D Elevation Design',
-              'Project Management'
-            ].map((item) => (
-              <li key={item}>
-                <Link href="/services" className="text-gray-400 hover:text-white hover:pl-2 transition-all">
-                  {item}
+              { name: 'Turnkey Construction', id: 'turnkey' },
+              { name: 'Residential Construction', id: 'residential' },
+              { name: 'Commercial Construction', id: 'commercial' },
+              { name: 'Interior Work', id: 'interiors' },
+              { name: 'Renovation', id: 'renovation' },
+              { name: 'Structural Consultancy', id: 'consultancy' },
+              { name: '2D Plan Design', id: '2d-plan' },
+              { name: '3D Elevation Design', id: '3d-elevation' },
+              { name: 'Project Management', id: 'pmc' }
+            ].map((service) => (
+              <li key={service.id}>
+                <Link href={`/services#${service.id}`} className="text-gray-400 hover:text-white hover:pl-2 transition-all">
+                  {service.name}
                 </Link>
               </li>
             ))}
@@ -80,19 +90,30 @@ export default function Footer() {
         <div>
           <h4 className="text-primary uppercase tracking-widest font-bold text-sm mb-8">Get In Touch</h4>
           <ul className="space-y-6 text-sm">
-            <li className="flex items-start space-x-4">
-              <MapPin size={20} className="text-primary shrink-0 mt-1" />
-              <span className="text-gray-400 leading-relaxed">
-                High Tension Double Road, Near Dhanush Corner, <br />Vijayanagar 4th Stage, Mysore – 570017
-              </span>
+            <li>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=High+Tension+Double+Road+Dhanush+Corner+Vijayanagar+4th+Stage+Mysore+570017" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start space-x-4 group"
+              >
+                <MapPin size={20} className="text-primary shrink-0 mt-1 transition-transform group-hover:scale-110" />
+                <span className="text-gray-400 leading-relaxed group-hover:text-white transition-colors">
+                  High Tension Double Road, Near Dhanush Corner, <br />Vijayanagar 4th Stage, Mysore – 570017
+                </span>
+              </a>
             </li>
-            <li className="flex items-center space-x-4">
-              <Phone size={20} className="text-primary shrink-0" />
-              <span className="text-gray-400">+91 99016 20876</span>
+            <li>
+              <a href="tel:+919901620876" className="flex items-center space-x-4 group">
+                <Phone size={20} className="text-primary shrink-0 transition-transform group-hover:scale-110" />
+                <span className="text-gray-400 group-hover:text-white transition-colors">+91 99016 20876</span>
+              </a>
             </li>
-            <li className="flex items-center space-x-4">
-              <Mail size={20} className="text-primary shrink-0" />
-              <span className="text-gray-400 break-all">vkconstructionandconsultants@gmail.com</span>
+            <li>
+              <a href="mailto:vkconstructionandconsultants@gmail.com" className="flex items-center space-x-4 group">
+                <Mail size={20} className="text-primary shrink-0 transition-transform group-hover:scale-110" />
+                <span className="text-gray-400 break-all group-hover:text-white transition-colors">vkconstructionandconsultants@gmail.com</span>
+              </a>
             </li>
             <li className="flex items-center space-x-4">
               <Clock size={20} className="text-primary shrink-0" />

@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { Target, Eye, Users, Briefcase, GraduationCap, Award } from 'lucide-react';
+import { Target, Eye, Users, Briefcase, GraduationCap, Award, Shield, CheckCircle } from 'lucide-react';
 
 export default function About() {
   const teamImg = PlaceHolderImages.find(img => img.id === 'about-team');
@@ -103,16 +103,35 @@ export default function About() {
 
       {/* Professional Standards */}
       <section className="py-32 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-black uppercase italic tracking-tighter mb-10">Quality <span className="text-primary not-italic">Standards</span></h3>
-          <div className="grid md:grid-cols-2 gap-10 text-left">
-            <div className="space-y-4">
-              <h5 className="font-black uppercase tracking-widest text-xs">QA & QC</h5>
-              <p className="text-sm text-muted-foreground">Rigorous Quality Assurance & Quality Control measures integrated into every stage of execution.</p>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Commitment</h4>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic">Quality <span className="text-primary not-italic">Standards</span></h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="group p-10 bg-off-white border border-transparent hover:border-primary transition-all duration-500">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-full">
+                  <Shield size={24} className="text-primary transform group-hover:rotate-12 transition-transform" />
+                </div>
+                <h4 className="font-black uppercase tracking-widest text-sm">QA & QC</h4>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Rigorous Quality Assurance & Quality Control measures are integrated into every stage of execution to ensure structural integrity and aesthetic excellence.
+              </p>
             </div>
-            <div className="space-y-4">
-              <h5 className="font-black uppercase tracking-widest text-xs">Technical Standards</h5>
-              <p className="text-sm text-muted-foreground">Adherence to modern construction best practices and international material standards.</p>
+
+            <div className="group p-10 bg-off-white border border-transparent hover:border-secondary transition-all duration-500">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-full">
+                  <CheckCircle size={24} className="text-secondary transform group-hover:rotate-12 transition-transform" />
+                </div>
+                <h4 className="font-black uppercase tracking-widest text-sm">Technical Standards</h4>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Strict adherence to modern construction best practices and international material standards is maintained throughout the project lifecycle.
+              </p>
             </div>
           </div>
         </div>

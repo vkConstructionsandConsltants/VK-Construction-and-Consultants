@@ -13,46 +13,58 @@
       "imageHint": "official business hero"
     },
     {
+      "id": "service-turnkey",
+      "description": "Turnkey Construction Excellence",
+      "imageUrl": "/images/service-turnkey.png",
+      "imageHint": "premium construction site"
+    },
+    {
       "id": "service-residential",
-      "description": "High-end residential villa in Mysore",
-      "imageUrl": "/images/service-residential.png",
+      "description": "High-end residential villa",
+      "imageUrl": "/images/service-residential-v2.png",
       "imageHint": "luxury home"
     },
     {
       "id": "service-commercial",
-      "description": "Commercial building project",
-      "imageUrl": "/images/service-commercial.png",
-      "imageHint": "commercial building"
+      "description": "Modern commercial building",
+      "imageUrl": "/images/service-commercial-v2.png",
+      "imageHint": "commercial complex"
     },
     {
-      "id": "service-industrial",
-      "description": "Project Management Site",
-      "imageUrl": "/images/service-industrial.png",
-      "imageHint": "construction site"
+      "id": "service-interiors",
+      "description": "Premium Interior Design",
+      "imageUrl": "/images/service-interiors.png",
+      "imageHint": "modern interior"
+    },
+    {
+      "id": "service-renovation",
+      "description": "Structural Renovation & Redesign",
+      "imageUrl": "/images/service-renovation.png",
+      "imageHint": "renovated building"
     },
     {
       "id": "service-structural",
-      "description": "Structural Consultancy & Safety",
-      "imageUrl": "/images/service-structural.png",
+      "description": "Structural Consultancy & Engineering",
+      "imageUrl": "/images/service-structural-v2.png",
       "imageHint": "civil engineering"
     },
     {
       "id": "service-2d",
-      "description": "2D Architectural Plans",
-      "imageUrl": "/images/service-2d.png",
+      "description": "2D Architectural Floor Plans",
+      "imageUrl": "/images/service-2d-v2.png",
       "imageHint": "architectural blueprint"
     },
     {
       "id": "service-3d",
       "description": "3D Elevation Renders",
-      "imageUrl": "/images/service-3d.png",
+      "imageUrl": "/images/service-3d-v2.png",
       "imageHint": "3d building model"
     },
     {
       "id": "service-pmc",
       "description": "Project Management & Consultation",
-      "imageUrl": "/images/service-pmc.png",
-      "imageHint": "business consultation"
+      "imageUrl": "/images/service-pmc-v2.png",
+      "imageHint": "construction management"
     },
     {
       "id": "project-1",
