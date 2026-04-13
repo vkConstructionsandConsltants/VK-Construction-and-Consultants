@@ -69,6 +69,13 @@ const galleryImages = [
 
 export default function Gallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [shuffledImages, setShuffledImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Shuffling the images on client-side mount
+    const shuffled = [...galleryImages].sort(() => Math.random() - 0.5);
+    setShuffledImages(shuffled);
+  }, []);
   
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
@@ -82,13 +89,13 @@ export default function Gallery() {
 
   const nextImage = useCallback(() => {
     if (selectedImageIndex === null) return;
-    setSelectedImageIndex((selectedImageIndex + 1) % galleryImages.length);
-  }, [selectedImageIndex]);
+    setSelectedImageIndex((selectedImageIndex + 1) % shuffledImages.length);
+  }, [selectedImageIndex, shuffledImages.length]);
 
   const prevImage = useCallback(() => {
     if (selectedImageIndex === null) return;
-    setSelectedImageIndex((selectedImageIndex - 1 + galleryImages.length) % galleryImages.length);
-  }, [selectedImageIndex]);
+    setSelectedImageIndex((selectedImageIndex - 1 + shuffledImages.length) % shuffledImages.length);
+  }, [selectedImageIndex, shuffledImages.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -116,13 +123,13 @@ export default function Gallery() {
       {/* Grid - Masonry Style */}
       <section className="px-6 lg:px-12 py-10 mb-32">
         <div className="max-w-7xl mx-auto columns-2 md:columns-3 gap-8 space-y-8">
-          {galleryImages.map((image, index) => (
+          {shuffledImages.map((image, index) => (
             <motion.div 
               layout
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              key={index} 
+              key={`${image}-${index}`} 
               className="break-inside-avoid group cursor-pointer"
               onClick={() => openLightbox(index)}
             >
@@ -195,7 +202,7 @@ export default function Gallery() {
                   className="relative w-full max-w-6xl h-full flex items-center justify-center overflow-hidden"
                 >
                   <Image 
-                    src={`/images/gallery/${galleryImages[selectedImageIndex]}`} 
+                    src={`/images/gallery/${shuffledImages[selectedImageIndex]}`} 
                     alt={`Project ${selectedImageIndex + 1}`}
                     fill
                     className="object-contain pointer-events-none"
