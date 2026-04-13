@@ -186,20 +186,25 @@ export default function Gallery() {
 
             {/* Main Image Container */}
             <div className="relative w-full h-full flex items-center justify-center">
-              <AnimatePresence mode="wait">
+              <AnimatePresence initial={false}>
                 <motion.div
                   key={selectedImageIndex}
-                  initial={{ opacity: 0, scale: 0.9, x: 20 }}
-                  animate={{ opacity: 1, scale: 1, x: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, x: -20 }}
-                  transition={{ type: "spring", damping: 30, stiffness: 200 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -100 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 35,
+                    opacity: { duration: 0.1 } 
+                  }}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
                   onDragEnd={(_, info) => {
                     if (info.offset.x > 100) prevImage();
                     if (info.offset.x < -100) nextImage();
                   }}
-                  className="relative w-full max-w-6xl h-full flex items-center justify-center overflow-hidden"
+                  className="absolute inset-0 flex items-center justify-center overflow-hidden"
                 >
                   <Image 
                     src={`/images/gallery/${shuffledImages[selectedImageIndex]}`} 
