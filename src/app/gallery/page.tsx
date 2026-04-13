@@ -44,7 +44,28 @@ const galleryImages = [
   "WhatsApp Image 2026-04-12 at 10.44.58 (1).jpeg",
   "WhatsApp Image 2026-04-12 at 10.44.58.jpeg",
   "WhatsApp Image 2026-04-12 at 10.44.59.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.23.45.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.23.46 (1).jpeg",
+  "WhatsApp Image 2026-04-13 at 20.23.46 (2).jpeg",
+  "WhatsApp Image 2026-04-13 at 20.23.46.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.23.47.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.30.28.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.36.31.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.37.36.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.39.19.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.42.35.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.42.36.jpeg",
+  "WhatsApp Image 2026-04-13 at 20.42.37 (1).jpeg",
+  "WhatsApp Image 2026-04-13 at 20.42.37.jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.27 (1).jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.27.jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.28 (1).jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.28.jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.40 (1).jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.40.jpeg",
+  "WhatsApp Image 2026-04-13 at 21.47.52.jpeg",
 ];
+
 
 export default function Gallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
