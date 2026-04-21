@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
-import logo from '@/assets/VK Logo.jpeg';
+import logo from '@/assets/VK Logo (1).jpeg';
 
 export default function Footer() {
   return (
@@ -26,7 +26,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Turnkey Construction Experts – Build smart, build strong. Delivering high-quality residential and commercial projects across Karnataka since 2021.
+            UDYAM Registered turnkey construction experts in Mysore. Specializing in high-performance residential and commercial builds across Karnataka. Build your legacy with confidence.
           </p>
           <div className="flex space-x-4">
             <a href="https://www.instagram.com/vk.construction_consultants?igsh=Z2VkbjZzcXN4NHM=" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
@@ -54,7 +54,14 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-medium">
             {['Home', 'About Us', 'Services', 'Gallery', 'Contact'].map((item) => (
               <li key={item}>
-                <Link href={`/${item === 'Home' ? '' : item.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-white hover:pl-2 transition-all">
+                <Link 
+                  href={
+                    item === 'Home' ? '/' : 
+                    item === 'Gallery' ? '/projects' : 
+                    `/${item.toLowerCase().replace(' ', '')}`
+                  } 
+                  className="text-gray-400 hover:text-white hover:pl-2 transition-all"
+                >
                   {item}
                 </Link>
               </li>
@@ -125,10 +132,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
         <p>© 2024 V K Construction & Consultants. UDYAM Registered.</p>
-        <div className="flex space-x-8">
-          <Link href="#" className="hover:text-primary">Privacy Policy</Link>
-          <Link href="#" className="hover:text-primary">Terms of Service</Link>
-        </div>
       </div>
     </footer>
   );

@@ -87,13 +87,13 @@
     {
       "id": "about-team",
       "description": "V K Construction Official Visiting Card",
-      "imageUrl": "/images/visiting-card.jpeg",
+      "imageUrl": "/images/visiting-card-new.jpeg",
       "imageHint": "visiting card"
     },
     {
       "id": "vk-full-official",
       "description": "V K Construction Excellence - Main Office/Project Photo",
-      "imageUrl": "/images/vk-full.jpeg",
+      "imageUrl": "/images/vk-full-new.jpeg",
       "imageHint": "professional construction photo"
     }
   ]

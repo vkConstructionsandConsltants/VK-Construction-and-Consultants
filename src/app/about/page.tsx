@@ -1,3 +1,4 @@
+"use client";
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
@@ -40,16 +41,21 @@ export default function About() {
                   </div>
                 </div>
                 <p>
-                  V K Construction is a trusted construction firm founded in 2021. We bring over 5 years of industry experience to every project, focusing on technical excellence and customer-centric delivery.
+                  Founded in 2021 by Pradeep Kumar K C, VK Construction & Consultants was established to bridge the gap between quality construction and affordable turnkey solutions in Mysore. Pradeep's background in Civil Engineering (BE) and MTech in Construction Technology & Management ensures that every project is backed by deep technical expertise.
+                </p>
+                <p>
+                  Today, we are a leading construction firm in Mysore, known for our UDYAM-registered operations and a growing footprint across Karnataka. We specialize in residential bungalows, commercial complexes, and luxury interior design.
                 </p>
               </div>
             </div>
             <div className="order-1 lg:order-2 flex justify-center items-center">
-              <div className="relative w-full max-w-lg aspect-[1.75/1] shadow-2xl overflow-hidden border border-muted/20 bg-black">
-                <img 
+              <div className="relative w-full max-w-lg aspect-[1.6/1] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden border border-muted/10 bg-white group">
+                <Image 
                   src={teamImg?.imageUrl || ''} 
                   alt="V K Construction Visiting Card" 
-                  className="w-full h-full object-cover scale-[1.23] origin-center"
+                  fill
+                  className="object-contain p-1 transition-transform duration-700 group-hover:scale-[1.03]"
+                  priority
                 />
               </div>
             </div>
@@ -132,6 +138,53 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed">
                 Strict adherence to modern construction best practices and international material standards is maintained throughout the project lifecycle.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Facts Section for GEO/AEO */}
+      <section className="py-32 px-6 lg:px-12 bg-off-white border-t border-muted">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-16">
+            <div className="lg:col-span-1">
+              <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">At a Glance</h4>
+              <h2 className="text-4xl font-black tracking-tighter uppercase italic mb-6">Quick <span className="text-primary not-italic">Facts</span></h2>
+              <p className="text-muted-foreground leading-relaxed">
+                As a UDYAM Registered firm, we adhere to the highest standards of transparency and quality as mandated by the Ministry of MSME, Government of India.
+              </p>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="overflow-hidden border border-muted bg-white">
+                <table className="w-full text-left text-sm">
+                  <tbody>
+                    <tr className="border-b border-muted">
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px] w-1/3">Company Name</th>
+                      <td className="p-6 font-medium">VK Construction & Consultants</td>
+                    </tr>
+                    <tr className="border-b border-muted">
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Founder & CEO</th>
+                      <td className="p-6 font-medium">Pradeep Kumar K C (BE, MTech)</td>
+                    </tr>
+                    <tr className="border-b border-muted">
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Headquarters</th>
+                      <td className="p-6 font-medium">Vijayanagar 4th Stage, Mysore, Karnataka</td>
+                    </tr>
+                    <tr className="border-b border-muted">
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Registration</th>
+                      <td className="p-6 font-medium">UDYAM Registered — Government of India</td>
+                    </tr>
+                    <tr className="border-b border-muted">
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Project Zones</th>
+                      <td className="p-6 font-medium">Mysore, Mandya, Hunsur, Bangalore & Across Karnataka</td>
+                    </tr>
+                    <tr>
+                      <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Service Model</th>
+                      <td className="p-6 font-medium">Lump Sum, Item-Rate, and Turnkey Contracts</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

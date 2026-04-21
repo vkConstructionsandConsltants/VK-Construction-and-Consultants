@@ -1,3 +1,4 @@
+"use client";
 
 import { Mail, Phone, MapPin, Send, Clock, Instagram } from 'lucide-react';
 
@@ -20,34 +21,63 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-2">
               <h3 className="text-3xl font-black tracking-tighter uppercase italic mb-8">Send A <span className="text-primary not-italic">Message</span></h3>
-              <form className="space-y-8">
+              <form action="https://formsubmit.co/vkconstructionandconsultants@gmail.com" method="POST" className="space-y-8">
+                {/* FormSubmit Configuration */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="New Enquiry - VK Construction Website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="http://localhost:3000/contact#success" />
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-[10px] uppercase tracking-widest font-black">Full Name</label>
-                    <input type="text" className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" placeholder="John Doe" />
+                    <input 
+                      type="text" 
+                      name="Full Name"
+                      required
+                      className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" 
+                      placeholder="John Doe" 
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] uppercase tracking-widest font-black">Phone Number</label>
-                    <input type="tel" className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" placeholder="99016XXXXX" />
+                    <input 
+                      type="tel" 
+                      name="Phone Number"
+                      required
+                      pattern="[0-9]{10}"
+                      className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" 
+                      placeholder="99016XXXXX" 
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest font-black">Interested Service</label>
-                  <select className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm appearance-none">
-                    <option>Turnkey Construction</option>
-                    <option>Residential Construction</option>
-                    <option>Commercial Construction</option>
-                    <option>Interior Work</option>
-                    <option>Renovation</option>
-                    <option>Structural Consultancy</option>
-                    <option>2D Plan Design</option>
-                    <option>3D Elevation Design</option>
-                    <option>Project Management & Consultation (PMC)</option>
+                  <select 
+                    name="Interested Service"
+                    required
+                    className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm appearance-none"
+                  >
+                    <option value="Turnkey Construction">Turnkey Construction</option>
+                    <option value="Residential Construction">Residential Construction</option>
+                    <option value="Commercial Construction">Commercial Construction</option>
+                    <option value="Interior Work">Interior Work</option>
+                    <option value="Renovation">Renovation</option>
+                    <option value="Structural Consultancy">Structural Consultancy</option>
+                    <option value="2D Plan Design">2D Plan Design</option>
+                    <option value="3D Elevation Design">3D Elevation Design</option>
+                    <option value="Project Management & Consultation (PMC)">Project Management & Consultation (PMC)</option>
                   </select>
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest font-black">Your Message</label>
-                  <textarea rows={6} className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" placeholder="Tell us about your project location and requirements..."></textarea>
+                  <textarea 
+                    name="Message"
+                    required
+                    rows={6} 
+                    className="w-full bg-off-white border border-muted/50 p-5 focus:border-primary outline-none transition-all text-sm" 
+                    placeholder="Please share your plot size (e.g., 30x40), project location in Mysore, and whether you need turnkey or labour-only services..."
+                  ></textarea>
                 </div>
                 <button type="submit" className="bg-black text-white px-12 py-5 text-xs uppercase tracking-[0.3em] font-bold hover:bg-primary transition-all flex items-center">
                   Submit Inquiry <Send size={16} className="ml-3" />
@@ -143,6 +173,37 @@ export default function Contact() {
             <MapPin size={14} className="mr-3" />
             Open In Google Maps
           </a>
+        </div>
+      </section>
+
+      {/* Contact FAQ / GEO section */}
+      <section className="py-32 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Planning Your Project</h4>
+            <h2 className="text-4xl font-black tracking-tighter uppercase italic mb-6">Service <span className="text-primary not-italic">Reach</span></h2>
+            <p className="text-muted-foreground leading-relaxed font-medium">
+              We primarily serve the <span className="text-foreground font-bold">Mysore Metropolitan Area</span> including Vijayanagar (all stages), JP Nagar, Kuvempunagar, and extended regions like Mandya, Hunsur, and Nanjangud.
+            </p>
+          </div>
+
+          <div className="divide-y divide-muted">
+            {[
+              {
+                q: "Do you offer free site visits in Mysore?",
+                a: "Yes, for plots within a 20km radius of Mysore city, we offer a complimentary initial site visit and consultation to assess feasibility and provide a rough estimate."
+              },
+              {
+                q: "What documents are required to start construction?",
+                a: "You'll need the Sale Deed, Possession Certificate, Tax Paid Receipts, and MUDA/Municipal sanctioned plan. If you don't have a plan yet, our structural consultants can handle the entire approval process for you."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="py-8">
+                <h3 className="font-bold text-lg mb-3 tracking-tight">{faq.q}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

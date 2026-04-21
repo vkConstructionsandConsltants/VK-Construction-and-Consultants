@@ -1,10 +1,14 @@
+"use client";
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Award, Shield, Timer, HardHat, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ChevronRight, Award, Shield, Timer, HardHat, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-villa');
   const featuredProjects = [
     { 
@@ -31,6 +35,25 @@ export default function Home() {
       area: '2400 sq ft',
       imageUrl: '/images/projects/vasanth-residence-hunsur.jpeg'
     },
+  ];
+
+  const faqs = [
+    {
+      q: "What is the average construction cost per sq ft in Mysore?",
+      a: "For high-quality turnkey residential construction in Mysore, the current market rate ranges from ₹2,000 to ₹2,400 per sq ft. This variation depends on the material grade (Standard, Premium, or Luxury) and structural complexity."
+    },
+    {
+      q: "How long does it take to build a 30x40 duplex house in Mysore?",
+      a: "A typical 30x40 duplex house build takes approximately 8 to 11 months from foundation to handover, assuming clear weather and timely architectural approvals."
+    },
+    {
+      q: "What is included in a turnkey construction contract?",
+      a: "Our turnkey service covers architectural design, plan approvals (MUDA/NOCs), structural engineering, material procurement, labor management, plumbing, electrical work, and final finishing. You simply receive the keys to a ready-to-move house."
+    },
+    {
+      q: "Do you handle MUDA and local municipal approvals?",
+      a: "Yes, VK Construction & Consultants provides end-to-end liaison services for municipal approvals, MUDA plans, and temporary utility connections in Mysore and surrounding areas."
+    }
   ];
 
   return (
@@ -63,7 +86,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <Link 
-                href="/gallery" 
+                href="/projects" 
                 className="bg-primary text-primary-foreground px-10 py-5 text-sm uppercase tracking-widest font-bold flex items-center justify-center hover:bg-secondary transition-all"
               >
                 Our Portfolio <ArrowRight className="ml-3" size={18} />
@@ -84,8 +107,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0">
           {[
             { label: 'Consultations Done', value: '200+' },
-            { label: 'Happy Clients', value: '200+' },
-            { label: 'Material Contracts', value: '10+' },
+            { label: 'Happy Clients', value: '250+' },
+            { label: 'Material Contracts', value: '18+' },
             { label: 'Years Experience', value: '5+' },
           ].map((stat, i) => (
             <div key={i} className="text-center lg:border-r last:border-0 border-muted">
@@ -111,10 +134,10 @@ export default function Home() {
               
               <div className="grid sm:grid-cols-2 gap-10">
                 {[
-                  { icon: Shield, title: 'Quality Assurance', desc: 'Strict adherence to material & technical standards.' },
-                  { icon: CheckCircle2, title: 'Transparency', desc: 'Clear and effective cost management.' },
-                  { icon: Timer, title: 'On-Time Delivery', desc: 'Committed to finishing projects as promised.' },
-                  { icon: HardHat, title: 'Safety First', desc: 'Modern construction best practices for safety.' },
+                  { icon: Shield, title: 'Quality Assurance', desc: 'We follow strict technical standards with 100+ quality checks, ensuring your home remains a legacy for generations.' },
+                  { icon: CheckCircle2, title: 'Transparency', desc: 'No hidden costs. Detailed material specifications and bill-of-quantities (BOQ) shared before we start.' },
+                  { icon: Timer, title: 'On-Time Delivery', desc: 'Time is money. We provide a project calendar and commit to handover dates with penalty-clause assurance.' },
+                  { icon: HardHat, title: 'Safety First', desc: 'Modern construction best practices for safety, including structural stability and site protection protocols.' },
                 ].map((item, i) => (
                   <div key={i} className="group">
                     <item.icon size={32} className="text-primary mb-4 group-hover:scale-110 transition-transform" />
@@ -131,7 +154,7 @@ export default function Home() {
                   src={PlaceHolderImages.find(img => img.id === 'vk-full-official')?.imageUrl || ''} 
                   alt="V K Construction Excellence" 
                   fill 
-                  className="object-cover"
+                  className="object-contain transition-transform duration-700 group-hover:scale-[1.05]"
                 />
               </div>
             </div>
@@ -147,7 +170,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Signature Projects</h2>
             <p className="text-primary mt-2 font-bold tracking-widest">RESIDENTIAL | COMMERCIAL | TURNKEY</p>
           </div>
-          <Link href="/gallery" className="text-xs uppercase tracking-[0.3em] font-bold text-white flex items-center hover:text-primary transition-colors">
+          <Link href="/projects" className="text-xs uppercase tracking-[0.3em] font-bold text-white flex items-center hover:text-primary transition-colors">
             Explore All Projects <ChevronRight className="ml-2" />
           </Link>
         </div>
@@ -166,7 +189,7 @@ export default function Home() {
                 <h5 className="text-primary text-[10px] uppercase tracking-[0.3em] font-bold mb-2">{project.type}</h5>
                 <h3 className="text-2xl font-bold mb-1 tracking-tighter uppercase italic">{project.title}</h3>
                 <p className="text-[10px] text-gray-400 mb-4 uppercase tracking-widest">{project.location}</p>
-                <Link href="/gallery" className="text-[10px] uppercase tracking-[0.2em] font-bold inline-flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <Link href="/projects" className="text-[10px] uppercase tracking-[0.2em] font-bold inline-flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   View Case Study <ArrowRight size={14} className="ml-2" />
                 </Link>
               </div>
@@ -179,9 +202,12 @@ export default function Home() {
       <section className="py-32 px-6 lg:px-12 bg-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 uppercase italic">Ready to Build Your <span className="text-primary not-italic">Dream?</span></h2>
-          <p className="text-lg text-muted-foreground mb-12 font-medium">
-            Starting Price: ₹2000 – ₹2400 per sq ft. Get in touch with Pradeep Kumar K C for expert consultation.
-          </p>
+          <div className="bg-primary/5 p-8 border-l-4 border-primary mb-12 text-left">
+            <h3 className="font-bold uppercase tracking-widest text-sm mb-4">Construction Cost in Mysore (2024-25)</h3>
+            <p className="text-muted-foreground font-medium leading-relaxed">
+              Transparent pricing starts from <span className="text-foreground font-bold">₹2,000 – ₹2,400 per sq ft</span> for turnkey residential projects. This includes everything from structural work to final paint. No surprises, only superior quality.
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-6">
             <Link 
               href="/contact" 
@@ -195,6 +221,58 @@ export default function Home() {
             >
               WhatsApp Us
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for AEO */}
+      <section className="py-32 px-6 lg:px-12 bg-off-white border-t border-muted">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Frequently Asked Questions</h4>
+            <h2 className="text-4xl font-black tracking-tighter uppercase italic">Your Questions, <span className="text-primary not-italic">Answered</span></h2>
+          </div>
+          
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div 
+                key={i} 
+                className={cn(
+                  "bg-white border transition-all duration-300",
+                  activeFaq === i ? "border-primary shadow-lg" : "border-muted hover:border-primary/50"
+                )}
+              >
+                <button
+                  onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between p-8 text-left focus:outline-none"
+                >
+                  <h3 className="font-bold text-lg flex items-start gap-3 pr-4">
+                    <span className="text-primary">Q.</span> {faq.q}
+                  </h3>
+                  <div className="flex-shrink-0 text-primary">
+                    {activeFaq === i ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                  </div>
+                </button>
+                
+                <div 
+                  className={cn(
+                    "overflow-hidden transition-all duration-300 ease-in-out",
+                    activeFaq === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  )}
+                >
+                  <div className="p-8 pt-0 border-t border-muted/10 leading-relaxed text-muted-foreground pl-14">
+                    {faq.a}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <p className="text-sm text-gray-500 font-medium mb-6 italic">Have a specific question about your plot or project?</p>
+            <Link href="/contact" className="text-primary font-bold uppercase tracking-widest text-xs hover:underline">
+              Ask Our Experts Directly →
+            </Link>
           </div>
         </div>
       </section>

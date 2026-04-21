@@ -15,7 +15,6 @@ const galleryImages = [
   "WhatsApp Image 2026-04-08 at 11.22.01 (3).jpeg",
   "WhatsApp Image 2026-04-08 at 11.22.01.jpeg",
   "WhatsApp Image 2026-04-08 at 11.22.02 (1).jpeg",
-  "WhatsApp Image 2026-04-08 at 11.22.02 (2).jpeg",
   "WhatsApp Image 2026-04-08 at 11.22.02.jpeg",
   "WhatsApp Image 2026-04-08 at 11.22.04 (1).jpeg",
   "WhatsApp Image 2026-04-08 at 11.22.04.jpeg",
@@ -114,9 +113,9 @@ export default function Gallery() {
       {/* Header */}
       <section className="bg-black text-white py-24 px-6 lg:px-12 mb-10">
         <div className="max-w-7xl mx-auto">
-          <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4 text-center md:text-left">Portfolio</h4>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-8 text-center md:text-left">Gallery <br /><span className="text-primary not-italic">Showcase</span></h1>
-          <p className="text-gray-400 font-bold uppercase tracking-widest text-center md:text-left">Our latest projects and construction milestones</p>
+          <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4 text-center md:text-left">Success Stories</h4>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-8 text-center md:text-left">Project <br /><span className="text-primary not-italic">Timeline</span></h1>
+          <p className="text-gray-400 font-bold uppercase tracking-widest text-center md:text-left max-w-2xl">A curated look at our residential bungalows, commercial complexes, and construction milestones across Karnataka.</p>
         </div>
       </section>
 
@@ -140,6 +139,7 @@ export default function Gallery() {
                   width={800}
                   height={1000}
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  priority={index < 3}
                 />
                 {/* Minimal Overlay on hover */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">

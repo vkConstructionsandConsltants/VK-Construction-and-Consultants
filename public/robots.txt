@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Specifically allow AI crawlers for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://vkconstructionandconsultants.com/sitemap.xml
