@@ -8,13 +8,17 @@ export default function About() {
   const teamImg = PlaceHolderImages.find(img => img.id === 'about-team');
 
   return (
-    <div className="pt-32">
+    <div className="pt-20 lg:pt-32">
       {/* Hero */}
-      <section className="bg-black text-white py-24 px-6 lg:px-12 mb-20">
+      <section className="bg-black text-white py-20 md:py-32 px-6 lg:px-12 mb-12 md:mb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center md:text-left">
-          <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Who We Are</h4>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-8">V K <span className="text-primary not-italic">Construction</span> <br /> & Consultants</h1>
-          <p className="text-gray-400 font-bold tracking-widest uppercase">Founded in 2021 by Pradeep Kumar K C</p>
+          <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-[10px] md:text-xs mb-4 md:mb-6 animate-in slide-in-from-bottom-4 duration-500">Who We Are</h4>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase italic mb-6 md:mb-10 leading-none animate-in slide-in-from-bottom-6 duration-700">
+            V K <span className="text-primary not-italic">Construction</span> <br className="hidden sm:block" /> & Consultants
+          </h1>
+          <p className="text-gray-400 font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs animate-in slide-in-from-bottom-8 duration-1000">
+            Founded in 2021 by Pradeep Kumar K C
+          </p>
         </div>
       </section>
 
