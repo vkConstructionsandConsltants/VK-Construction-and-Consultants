@@ -1,8 +1,22 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send, Clock, Instagram } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Send, Clock, Instagram, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash === '#success') {
+      setIsSubmitted(true);
+      // Remove hash from URL without refreshing for a clean look
+      window.history.replaceState(null, '', window.location.pathname);
+      // Automatically hide the message after 10 seconds
+      const timer = setTimeout(() => setIsSubmitted(false), 10000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <div className="pt-32">
       {/* Header */}
@@ -20,7 +34,25 @@ export default function Contact() {
           <div className="grid lg:grid-cols-3 gap-20">
             {/* Form */}
             <div className="lg:col-span-2">
-              <h3 className="text-3xl font-black tracking-tighter uppercase italic mb-8">Send A <span className="text-primary not-italic">Message</span></h3>
+              {isSubmitted ? (
+                <div className="bg-primary/5 border border-primary/20 p-12 text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <CheckCircle2 className="text-primary" size={40} />
+                  </div>
+                  <h3 className="text-3xl font-black tracking-tighter uppercase italic mb-4">Message <span className="text-primary not-italic">Sent!</span></h3>
+                  <p className="text-muted-foreground font-medium mb-8">
+                    Thank you for reaching out. Your inquiry has been successfully delivered. Our engineering team will review your details and contact you within 24–48 hours.
+                  </p>
+                  <button 
+                    onClick={() => setIsSubmitted(false)}
+                    className="text-[10px] uppercase tracking-[0.3em] font-bold border-b-2 border-primary pb-2 hover:text-primary transition-all"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-3xl font-black tracking-tighter uppercase italic mb-8">Send A <span className="text-primary not-italic">Message</span></h3>
               <form action="https://formsubmit.co/vkconstructionandconsultants@gmail.com" method="POST" className="space-y-8">
                 {/* FormSubmit Configuration */}
                 <input type="hidden" name="_captcha" value="false" />
@@ -82,7 +114,9 @@ export default function Contact() {
                 <button type="submit" className="bg-black text-white px-12 py-5 text-xs uppercase tracking-[0.3em] font-bold hover:bg-primary transition-all flex items-center">
                   Submit Inquiry <Send size={16} className="ml-3" />
                 </button>
-              </form>
+                  </form>
+                </>
+              )}
             </div>
 
             {/* Sidebar Info */}
