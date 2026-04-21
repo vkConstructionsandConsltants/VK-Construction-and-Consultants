@@ -26,7 +26,7 @@ export default function Contact() {
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Enquiry - VK Construction Website" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="http://localhost:3000/contact#success" />
+                <input type="hidden" name="_next" value="https://vk-construction-and-consultants.vercel.app/contact#success" />
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-2">
