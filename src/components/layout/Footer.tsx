@@ -58,6 +58,7 @@ export default function Footer() {
                   href={
                     item === 'Home' ? '/' : 
                     item === 'Gallery' ? '/projects' : 
+                    item === 'About Us' ? '/about' :
                     `/${item.toLowerCase().replace(' ', '')}`
                   } 
                   className="text-gray-400 hover:text-white hover:pl-2 transition-all"
