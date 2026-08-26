@@ -100,14 +100,14 @@ export default function Footer() {
           <ul className="space-y-6 text-sm">
             <li>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=High+Tension+Double+Road+Dhanush+Corner+Vijayanagar+4th+Stage+Mysore+570017" 
+                href="https://www.google.com/maps/place/Original+Bangarpet+Chats/@12.3314783,76.5809319,689m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baf7b006680db8d:0xb01e31acdf2f529b!8m2!3d12.3314731!4d76.5835068!16s%2Fg%2F11wtktt98_!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-start space-x-4 group"
               >
                 <MapPin size={20} className="text-primary shrink-0 mt-1 transition-transform group-hover:scale-110" />
                 <span className="text-gray-400 leading-relaxed group-hover:text-white transition-colors">
-                  High Tension Double Road, Near Dhanush Corner, <br />Vijayanagar 4th Stage, Mysore – 570017
+                  #4086, Ground Floor, <br />Vijayanagara 4th Stage, 3rd Phase, <br />Mysore – 570017
                 </span>
               </a>
             </li>
@@ -115,6 +115,12 @@ export default function Footer() {
               <a href="tel:+919901620876" className="flex items-center space-x-4 group">
                 <Phone size={20} className="text-primary shrink-0 transition-transform group-hover:scale-110" />
                 <span className="text-gray-400 group-hover:text-white transition-colors">+91 99016 20876</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+917892520876" className="flex items-center space-x-4 group">
+                <Phone size={20} className="text-primary shrink-0 transition-transform group-hover:scale-110" />
+                <span className="text-gray-400 group-hover:text-white transition-colors">+91 78925 20876</span>
               </a>
             </li>
             <li>

@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-villa');
-  const featuredProjects = [
+  const allSignatureProjects = [
     { 
       id: 'project-1', 
       title: 'Bar and Restaurant at KRN', 
@@ -34,6 +34,34 @@ export default function Home() {
       location: 'Hunsur', 
       area: '2400 sq ft',
       imageUrl: '/images/projects/vasanth-residence-hunsur.jpeg'
+    },
+    { 
+      id: 'project-4', 
+      title: 'Mr. Asif Residence', 
+      type: 'Residential', 
+      location: 'K R Nagar', 
+      imageUrl: '/images/projects/Mr.Asif residence at K R Nagar.jpeg'
+    },
+    { 
+      id: 'project-5', 
+      title: 'Mr. Mahesh Residence', 
+      type: 'Residential', 
+      location: 'Ilvala', 
+      imageUrl: '/images/projects/Mr.Mahesh residence at ilvala.jpg'
+    },
+    { 
+      id: 'project-6', 
+      title: 'Mr. Varun Residence', 
+      type: 'Residential', 
+      location: 'Hunsur', 
+      imageUrl: '/images/projects/Mr.Varun residence at Hunsur.jpeg'
+    },
+    { 
+      id: 'project-7', 
+      title: 'Mrs. Pavithra Residence', 
+      type: 'Residential', 
+      location: 'Vasanth Nagar, Mysore', 
+      imageUrl: '/images/projects/Mrs.Pavithra residence at vasanth Nagar mysore.jpg'
     },
   ];
 
@@ -151,10 +179,10 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square relative overflow-hidden shadow-2xl bg-black">
                 <Image 
-                  src={PlaceHolderImages.find(img => img.id === 'vk-full-official')?.imageUrl || ''} 
-                  alt="V K Construction Excellence" 
+                  src="/images/owner.jpeg"
+                  alt="Pradeep Kumar K C - Founder, V K Construction & Consultants" 
                   fill 
-                  className="object-contain transition-transform duration-700 group-hover:scale-[1.05]"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                 />
               </div>
             </div>
@@ -162,9 +190,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Project - Om Shanti Bhavana */}
-      <section className="py-32 bg-black text-white px-6 lg:px-12 overflow-hidden">
-        <div className="max-w-7xl mx-auto mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+      {/* Signature Projects - Live Horizontal Scroll */}
+      <section className="py-20 bg-black text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto mb-16 px-6 lg:px-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <h4 className="text-primary uppercase tracking-[0.3em] font-bold text-xs mb-4">Our Portfolio</h4>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Signature Projects</h2>
@@ -175,26 +203,27 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {featuredProjects.map((project, i) => (
-            <div key={project.id} className="group relative overflow-hidden aspect-[3/4] border border-white/10">
-              <Image 
-                src={project.imageUrl} 
-                alt={project.title} 
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
-                <h5 className="text-primary text-[10px] uppercase tracking-[0.3em] font-bold mb-2">{project.type}</h5>
-                <h3 className="text-2xl font-bold mb-1 tracking-tighter uppercase italic">{project.title}</h3>
-                <p className="text-[10px] text-gray-400 mb-4 uppercase tracking-widest">{project.location}</p>
-                <Link href="/projects" className="text-[10px] uppercase tracking-[0.2em] font-bold inline-flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                  View Case Study <ArrowRight size={14} className="ml-2" />
-                </Link>
+        {/* Infinite horizontal scroll */}
+        <div className="signature-scroll-wrapper group/scroll">
+          <div className="signature-scroll-track">
+            {[...allSignatureProjects, ...allSignatureProjects].map((project, i) => (
+              <div key={`${project.id}-${i}`} className="signature-scroll-item group relative overflow-hidden border border-white/10 flex-shrink-0">
+                <Image 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  width={500}
+                  height={667}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
+                <div className="absolute bottom-0 left-0 p-6 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
+                  <h5 className="text-primary text-[10px] uppercase tracking-[0.3em] font-bold mb-2">{project.type}</h5>
+                  <h3 className="text-xl font-bold mb-1 tracking-tighter uppercase italic">{project.title}</h3>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-widest">{project.location}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

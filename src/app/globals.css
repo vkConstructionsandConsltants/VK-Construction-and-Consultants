@@ -83,3 +83,71 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Signature Projects - Infinite Horizontal Scroll */
+@keyframes signatureScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.signature-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 2rem;
+}
+
+.signature-scroll-wrapper::before,
+.signature-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.signature-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(0 0 0) 0%, transparent 100%);
+}
+
+.signature-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(0 0 0) 0%, transparent 100%);
+}
+
+.signature-scroll-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: signatureScroll 40s linear infinite;
+  width: max-content;
+}
+
+.signature-scroll-wrapper:hover .signature-scroll-track {
+  animation-play-state: paused;
+}
+
+.signature-scroll-item {
+  width: 280px;
+  height: 370px;
+}
+
+@media (min-width: 768px) {
+  .signature-scroll-item {
+    width: 320px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .signature-scroll-item {
+    width: 340px;
+    height: 430px;
+  }
+}

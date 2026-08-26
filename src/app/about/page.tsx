@@ -41,7 +41,7 @@ export default function About() {
                   <div className="bg-white p-6 shadow-sm border-l-4 border-secondary">
                     <Award className="text-secondary mb-4" />
                     <h4 className="font-bold uppercase text-sm mb-2">Registration</h4>
-                    <p className="text-xs">UDYAM Registered Construction Firm</p>
+                    <p className="text-xs">UDYAM Registered Construction Firm<br/>GST Number - 29CWYPP4384C1ZQ</p>
                   </div>
                 </div>
                 <p>
@@ -172,11 +172,11 @@ export default function About() {
                     </tr>
                     <tr className="border-b border-muted">
                       <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Headquarters</th>
-                      <td className="p-6 font-medium">Vijayanagar 4th Stage, Mysore, Karnataka</td>
+                      <td className="p-6 font-medium">#4086, Ground Floor, Vijayanagara 4th Stage, 3rd Phase, Mysore – 570017</td>
                     </tr>
                     <tr className="border-b border-muted">
                       <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Registration</th>
-                      <td className="p-6 font-medium">UDYAM Registered — Government of India</td>
+                      <td className="p-6 font-medium">UDYAM Registered — Government of India<br/>GST Number - 29CWYPP4384C1ZQ</td>
                     </tr>
                     <tr className="border-b border-muted">
                       <th className="p-6 bg-muted/20 font-bold uppercase tracking-widest text-[10px]">Project Zones</th>

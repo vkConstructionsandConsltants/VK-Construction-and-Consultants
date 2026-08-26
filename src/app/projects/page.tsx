@@ -63,6 +63,16 @@ const galleryImages = [
   "WhatsApp Image 2026-04-13 at 21.47.40 (1).jpeg",
   "WhatsApp Image 2026-04-13 at 21.47.40.jpeg",
   "WhatsApp Image 2026-04-13 at 21.47.52.jpeg",
+  "Mr.Asif residence at K R Nagar.jpeg",
+  "Mr.Mahesh residence at ilvala.jpg",
+  "Mr.Varun residence at Hunsur.jpeg",
+  "Mrs.Pavithra residence at vasanth Nagar mysore.jpg",
+  "owner.jpeg",
+  "pooja 2.jpg",
+  "pooja.jpeg",
+  "VK IN GLASS.jpeg",
+  "VK OUT.jpeg",
+  "family.jpeg",
 ];
 
 

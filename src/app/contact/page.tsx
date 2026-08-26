@@ -131,7 +131,7 @@ export default function Contact() {
                     <div>
                       <h5 className="font-bold uppercase tracking-tighter mb-2">Office Address</h5>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        High Tension Double Road, Near Dhanush Corner, <br />Vijayanagar 4th Stage, Mysore – 570017
+                        #4086, Ground Floor, <br />Vijayanagara 4th Stage, 3rd Phase, <br />Mysore – 570017
                       </p>
                     </div>
                   </div>
@@ -142,6 +142,7 @@ export default function Contact() {
                     <div>
                       <h5 className="font-bold uppercase tracking-tighter mb-2">Contact</h5>
                       <p className="text-sm text-muted-foreground">+91 9901620876</p>
+                      <p className="text-sm text-muted-foreground">+91 7892520876</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-6">
@@ -199,7 +200,7 @@ export default function Contact() {
         />
         <div className="absolute top-8 left-8 z-10">
           <a 
-            href="https://maps.google.com/maps?q=High%20Tension%20Double%20Road,%20Near%20Dhanush%20Corner,%20Vijayanagar%204th%20Stage,%20Mysore%20570017" 
+            href="https://www.google.com/maps/place/Original+Bangarpet+Chats/@12.3314783,76.5809319,689m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baf7b006680db8d:0xb01e31acdf2f529b!8m2!3d12.3314731!4d76.5835068!16s%2Fg%2F11wtktt98_!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-black text-white px-8 py-4 text-[10px] uppercase font-bold tracking-widest flex items-center shadow-2xl hover:bg-primary transition-all"
